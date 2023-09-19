@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <style>
+            .grid{
+                display: grid;
+                margin-top: 30px;
+                grid-template-columns: 1fr 1fr 1fr ;
+                row-gap: 20px;
+                column-gap: 20px;
+            }
+        </style>
+    </head>
     <body>
-        <div style="display:grid;
-        grid-template-columns: 100px 100px 1fr"
-        
-        >
-            <div style="background-color: lightblue;">
-                div1
+        <div class="grid">
+            <div style="background-color: lightblue; height:200px; ">
+                1fr
             </div>
-            <div style="background-color: lightpink;">
-                div2
+            <div style="background-color: lightpink;height:200px;">
+                1fr
             </div>
-            <div style="background-color: lightblue;">
-                div3
+            <div style="background-color: lightblue;height:200px;">
+                1fr
+            </div>
+            <div style="background-color: lightpink;height:200px;">
+                1fr
+            </div>
+            <div style="background-color: lightblue;height:200px;">
+                1fr
+            </div>
+            <div style="background-color: lightpink;height:200px;">
+                1fr
             </div>
         </div>
         
