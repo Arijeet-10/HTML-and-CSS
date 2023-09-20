@@ -11,6 +11,222 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/sidebar.css">
+    <style>
+        .header{
+            height:  55px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: white;
+            border-bottom-style:solid ;
+            border-bottom-width: 1px ;
+            border-bottom-color: rgb(223, 218, 218) ;
+            z-index: 1000;
+        }
+        .left-section{
+            display: flex;
+            align-items: center;
+        }
+        .middle-section{
+            
+            display: flex;
+            align-items: center;
+            flex: 1;
+            margin-left: 70px;
+            margin-right: 35px;
+            max-width:500px ;
+        }
+        .right-section{
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 24px;
+            flex-shrink: 0;
+        }
+        .hamburger-icon{
+            height: 20px;
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+        .youtube-logo{
+            height: 20px;
+        }
+        .search-button{
+            width: 64px;
+            height: 40px;
+            border: solid;
+            border-width: 1px;
+            border-color: rgb(198, 187, 187);
+            margin-left: -1px;
+        }
+        .search-icon{
+            width: 50%;
+        }
+        .voice-button{
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: rgb(239, 233, 233);
+            border-radius: 50px;
+            margin-left: 8px;
+        }
+        .voice-icon{
+            width: 80%;
+        }
+        .search-bar{
+            height: 36px;
+            flex: 1;
+            border: solid;
+            border-width: 1px;
+            border-color: rgb(198, 187, 187);
+            font-size: 16px;
+            width: 0;
+        
+        }
+        .youtube-icons{
+            height: 36px;
+        }
+        .youtube-apps{
+            height: 36px;
+        }
+        .notification{
+            height: 36px;
+        }
+        .youtube-profile-pic{
+            height: 36px;
+            
+        }
+        .notification-container{
+            position: relative;
+            
+        }
+        .notification-count{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+            border: none;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-right: 6px;
+            padding-left: 6px;
+            font-family: roboto,arial;
+            font-size: 14px;
+        
+        }
+        .sidebar{
+            background-color: white;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top:55px;
+            width: 90px;
+        }
+        .sidebar-link{
+            
+            height: 100px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-size: 12px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,Arial, Helvetica, sans-serif;
+            justify-content: center;
+            z-index: 200;
+            padding-top: 5px;
+        }
+        .sidebar-icon{
+            width: 36px;
+            padding-top: 10px;
+        }
+        .sidebar-link:hover{
+            background-color: lightblue;
+        }
+        
+        .video-thumbnail{
+            width: 100%; 
+        }
+        .thumbnail-row{
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .video-grid-preview{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+        .video-preview{
+
+        }
+        .channel-pic{
+            
+        }
+        .profile-pic{
+            width: 60%;
+            border-radius: 50px;
+        }
+        .video-info{
+            
+        }
+        .video-title{
+            width: 100%;
+            margin-top: 0;
+            font-weight: bold;
+            line-height: 20px;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        .video-author{
+            color: rgb(96, 96, 96);
+            font-size: 13px;
+            margin-bottom: 4px;
+            
+        }
+        .video-stats{
+            color: rgb(96, 96, 96);
+            font-size: 13px;
+        }
+        .video-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+        .video-time{
+            color: white;
+            background-color: black;
+            position: absolute;
+            right: 6px;
+            bottom: 8px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            padding:4px;
+        }
+        p{
+            font-family: roboto,arial;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        body{
+            padding-top: 75px;
+            padding-left: 95px;
+            padding-bottom: 1000px;
+            padding-right: 24px;
+            margin:0;
+            font-family: roboto,arial;
+            background-color: rgb(248, 244, 244);
+        }
+
+
+
+        
+    </style>
 </head>
 
 <body>
@@ -35,12 +251,12 @@
     </div>
 
     <div class="sidebar">
-        <div class="sidebar-link"> <img class="sidebar-icon" src="/youtube-clone/icons/home.svg" alt="">Home </div>
-        <div class="sidebar-link"> <img class="sidebar-icon" src="/youtube-clone/icons/explore.svg" alt=""> Explore</div>
-        <div class="sidebar-link"> <img class="sidebar-icon" src="/youtube-clone/icons/subscriptions.svg" alt="">Subscriptions </div>
-        <div class="sidebar-link"> <img class="sidebar-icon" src="/youtube-clone/icons/originals.svg" alt="">Originals </div>
-        <div class="sidebar-link"> <img class="sidebar-icon" src="/youtube-clone/icons/youtube-music.svg" alt="">Youtube-Music </div>
-        <div class="sidebar-link"> <img class="sidebar-icon" src="/youtube-clone/icons/library.svg" alt="">Library </div>
+        <div class="sidebar-link"> </div>
+        <div class="sidebar-link"> </div>
+        <div class="sidebar-link"> </div>
+        <div class="sidebar-link"> </div>
+        <div class="sidebar-link"> </div>
+        <div class="sidebar-link"> </div>
     </div>
 
     <div class="video-grid">
@@ -80,12 +296,12 @@
         </div>
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="video-thumbnail" src="/youtube-clone/thumbnails/thumb3.webp" alt="">
+                <img class="video-thumbnail" src="/youtube-clone/thumbnails/hq720.webp" alt="">
                 <div class="video-time">14:20</div>
             </div>
             <div class="video-grid-preview">
                 <div class="channel-pic">
-                    <img class="profile-pic" src="/youtube-clone/profile-pic/2.jpg" alt="">
+                    <img class="profile-pic" src="\youtube-clone/profile-pic/unnamed.jpg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title">2023 BMW S 1000 RR Pro M Sport India review - Is it the ultimate superbike?</p>
