@@ -1,5 +1,5 @@
 .header{
-    height:  55px;
+    height:  75px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,12 +35,12 @@
     flex-shrink: 0;
 }
 .hamburger-icon{
-    height: 20px;
+    height: 24px;
     margin-left: 24px;
     margin-right: 24px;
 }
 .youtube-logo{
-    height: 20px;
+    height: 24px;
 }
 .search-button{
     width: 64px;
@@ -75,16 +75,16 @@
 
 }
 .youtube-icons{
-    height: 36px;
+    height: 34px;
 }
 .youtube-apps{
-    height: 36px;
+    height: 34px;
 }
 .notification{
-    height: 36px;
+    height: 34px;
 }
 .youtube-profile-pic{
-    height: 36px;
+    height: 34px;
     
 }
 .notification-container{
